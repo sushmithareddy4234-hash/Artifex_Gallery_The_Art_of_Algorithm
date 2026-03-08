@@ -1,33 +1,113 @@
-# ARTIFEX-GALLERY (generated from project report)
+# Artifex Gallery – AI Image Generator
 
-This repository contains a minimal full-stack implementation based on the "ARTIFEX GALLERY - THE ART OF ALGORITHM" project report.
+Artifex Gallery is a simple AI project that generates images from text prompts.
 
-## Structure
+The system improves the user prompt using **Groq AI** and then generates an image using **Stable Diffusion (HuggingFace)**.
 
-- backend/: Express server that:
-  - generates images (via OpenAI Images endpoint)
-  - builds NFT metadata
-  - uploads image + metadata to IPFS using Pinata (if PINATA_JWT set)
-  - exposes POST /generate-nft
+---
 
-- frontend/: Next.js minimal app with a single form (components/NFTForm.jsx) to call backend
+## Features
 
-## Quickstart (local)
+- Generate AI images from text
+- Prompt enhancement using Groq
+- Image generation using Stable Diffusion
+- Simple UI with image preview
 
-### Backend
-1. `cd backend`
-2. `cp .env.example .env` and fill keys (DALLE_API_KEY, PINATA_JWT)
-3. `npm install`
-4. `npm run dev`
-Backend runs on port 3000 by default.
+---
 
-### Frontend
-1. `cd frontend`
-2. `npm install`
-3. `npm run dev`
-4. Open http://localhost:3000
+## Tech Stack
 
-Notes:
-- If you don't set DALLE_API_KEY or PINATA_JWT, the backend will return placeholder URLs so you can still test the flow locally.
-- This is a starter scaffold created from your project report. You can expand each module later.
+Frontend
+- React
+- Next.js
+- Tailwind CSS
 
+Backend
+- Node.js
+- Express.js
+
+AI APIs
+- Groq API
+- HuggingFace Stable Diffusion
+
+---
+
+## Project Structure
+
+ARTIFEX-GALLERY
+
+backend
+- server.js
+- imageGeneration.js
+- metadata.js
+- ipfsUpload.js
+
+frontend
+- components
+- pages
+
+---
+
+## Installation
+
+Clone repository
+
+```
+git clone https://github.com/sushmithareddy4234-hash/Artifex_Gallery_The_Art_of_Algorithm
+```
+
+Install backend
+
+```
+cd backend
+npm install
+```
+
+Install frontend
+
+```
+cd ../frontend
+npm install
+```
+
+---
+
+## Environment Variables
+
+Create `.env` in backend
+
+```
+GROQ_API_KEY=your_groq_key
+HUGGINGFACE_API_KEY=your_huggingface_key
+```
+
+---
+
+## Run Project
+
+Start backend
+
+```
+cd backend
+node server.js
+```
+
+Start frontend
+
+```
+cd frontend
+npm run dev
+```
+
+Open browser
+
+```
+http://localhost:3001
+```
+
+---
+
+## Author
+
+Sushmitha Reddy  
+CSE Student
