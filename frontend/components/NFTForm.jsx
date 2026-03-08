@@ -30,7 +30,7 @@ export default function NFTForm() {
         <div className="bg-purple-700/60 backdrop-blur-md p-6 rounded-xl shadow-xl h-[220px]">
 
           <h1 className="text-3xl font-bold text-white mb-4 flex items-center gap-2">
-            🎨 Artifex AI Gallery
+             Artifex AI Gallery
           </h1>
 
           <input
